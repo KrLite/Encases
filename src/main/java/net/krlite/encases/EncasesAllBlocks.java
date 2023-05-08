@@ -1,13 +1,13 @@
 package net.krlite.encases;
 
-import static net.krlite.create_encases.util.CreateBlockBuilders.createEncasedCogwheel;
-import static net.krlite.create_encases.util.CreateBlockBuilders.createEncasedShaft;
-import static net.krlite.create_encases.util.EncasesBlockBuilders.*;
-import static net.krlite.create_encases.util.EncasesBlockSettings.*;
+import static net.krlite.encases.util.CreateBlockBuilders.createEncasedCogwheel;
+import static net.krlite.encases.util.CreateBlockBuilders.createEncasedShaft;
+import static net.krlite.encases.util.EncasesBlockBuilders.*;
+import static net.krlite.encases.util.EncasesBlockSettings.*;
 
-import net.krlite.create_encases.content.contraptions.relays.encased.EncasesEncasedCogwheelBlock;
-import net.krlite.create_encases.content.contraptions.relays.encased.EncasesEncasedShaftBlock;
-import net.krlite.create_encases.util.EncasesBlockSettings;
+import net.krlite.encases.content.contraptions.relays.encased.EncasesEncasedCogwheelBlock;
+import net.krlite.encases.content.contraptions.relays.encased.EncasesEncasedShaftBlock;
+import net.krlite.encases.util.EncasesBlockSettings;
 import com.simibubi.create.content.contraptions.base.CasingBlock;
 import com.simibubi.create.content.curiosities.deco.MetalLadderBlock;
 import com.tterrag.registrate.util.entry.BlockEntry;

@@ -3,9 +3,9 @@ package net.krlite.encases.util;
 import java.util.Collections;
 import java.util.List;
 
-import net.krlite.create_encases.CreateEncases;
-import net.krlite.create_encases.EncasesAllBlocks;
-import net.krlite.create_encases.EncasesAllItems;
+import net.krlite.encases.Encases;
+import net.krlite.encases.EncasesAllBlocks;
+import net.krlite.encases.EncasesAllItems;
 import com.simibubi.create.AllBlocks;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 
@@ -17,7 +17,7 @@ import net.minecraft.util.Identifier;
 public class EncasesItemGroups {
     public static final ItemGroup CREATORS_DECORS = FabricItemGroupBuilder
             .create(
-                    new Identifier(CreateEncases.ID, "general"))
+                    new Identifier(Encases.ID, "general"))
                     .icon(EncasesAllBlocks.SHADOW_STEEL_ENCASED_COGWHEEL::asStack)
                     .appendItems(itemStacks -> {
                         itemStacks.addAll(Collections.nCopies(54, ItemStack.EMPTY));

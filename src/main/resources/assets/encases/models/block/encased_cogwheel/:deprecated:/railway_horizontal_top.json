@@ -1,0 +1,11 @@
+{
+	"parent": "encases:block/encased_cogwheel/block_horizontal_top",
+	"textures": {
+		"casing": "create:block/railway_casing_side",
+		"gearbox": "encases:block/railway_gearbox_side",
+		"inner": "minecraft:block/chiseled_deepslate",
+		"top": "encases:block/railway_encased_cogwheel_top",
+		"layered": "encases:block/railway_encased_cogwheel_layered",
+		"layered_alt": "encases:block/railway_encased_cogwheel_layered_alt"
+	}
+}

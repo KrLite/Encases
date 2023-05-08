@@ -8,7 +8,8 @@ import io.github.fabricators_of_create.porting_lib.util.EnvExecutor;
 import net.fabricmc.api.ModInitializer;
 
 import net.krlite.encases.util.EncasesItemGroups;
-import net.minecraft.resources.ResourceLocation;
+
+import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +25,7 @@ public class Encases implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Create addon mod [{}] is loading alongside Create [{}]!", NAME, Create.VERSION);
+		LOGGER.info("Create addon mod [{}] is loading alongside Create [{}]! ⚙️", NAME, Create.VERSION);
 		LOGGER.info(EnvExecutor.unsafeRunForDist(
 				() -> () -> "{} is accessing Porting Lib from the client!",
 				() -> () -> "{} is accessing Porting Lib from the server!"
@@ -36,10 +37,10 @@ public class Encases implements ModInitializer {
 	}
 
 	public static Identifier identifier(String... paths) {
-		return new Identifier(Arrays.stream(paths).filter(Objects::nonNull).filter(p -> !p.isEmpty()).collect(Collectors.joining("/")));
+		return id(Arrays.stream(paths).filter(Objects::nonNull).filter(p -> !p.isEmpty()).collect(Collectors.joining("/")));
 	}
 
-	public static ResourceLocation id(String path) {
-		return new ResourceLocation(ID, path);
+	public static Identifier id(String path) {
+		return new Identifier(ID, path);
 	}
 }

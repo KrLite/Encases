@@ -4,8 +4,18 @@
   "package": "net.krlite.encases.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AllSpriteShiftsInvoker",
+    "BeltBlockMixin",
+    "BeltTileEntityMixin",
+    "BuilderTransformersMixin",
+    "CasingTypeMixin",
+    "CogWheelBlockMixin",
+    "CreateAccessor",
+    "CreateMixin",
+    "ShaftBlockMixin"
   ],
   "client": [
+    "BeltModelMixin"
   ],
   "injectors": {
     "defaultRequire": 0

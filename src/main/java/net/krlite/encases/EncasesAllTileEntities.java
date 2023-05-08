@@ -10,7 +10,7 @@ import com.tterrag.registrate.util.entry.BlockEntityEntry;
 
 public class EncasesAllTileEntities {
 	// Encased Cogwheel
-	public static final BlockEntityEntry<SimpleKineticTileEntity> CD_ENCASED_COGWHEEl = CreateEncases.registrate()
+	public static final BlockEntityEntry<SimpleKineticTileEntity> CD_ENCASED_COGWHEEl = Encases.registrate()
 			.tileEntity("encased_cogwheel", SimpleKineticTileEntity::new)
 			.instance(()-> EncasedCogInstance::small, false)
 			.validBlocks(
@@ -26,7 +26,7 @@ public class EncasesAllTileEntities {
 			.register();
 
 	// Encased Large Cogwheel
-	public static final BlockEntityEntry<SimpleKineticTileEntity> CD_ENCASED_LARGE_COGWHEEl = CreateEncases.registrate()
+	public static final BlockEntityEntry<SimpleKineticTileEntity> CD_ENCASED_LARGE_COGWHEEl = Encases.registrate()
 			.tileEntity("encased_large_cogwheel", SimpleKineticTileEntity::new)
 			.instance(()-> EncasedCogInstance::large, false)
 			.validBlocks(
@@ -42,7 +42,7 @@ public class EncasesAllTileEntities {
 			.register();
 
 	// Encased Shaft
-	public static final BlockEntityEntry<KineticTileEntity> CD_ENCASED_SHAFT = CreateEncases.registrate()
+	public static final BlockEntityEntry<KineticTileEntity> CD_ENCASED_SHAFT = Encases.registrate()
 			.tileEntity("encased_shaft", KineticTileEntity::new)
 			.instance(()-> ShaftInstance::new, false)
 			.validBlocks(

@@ -43,7 +43,6 @@ dependencies {
 	})
 	modImplementation("net.fabricmc:fabric-loader:${fabric_loader_version}")
 
-	// dependencies
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_api_version}")
 
 	// Create - dependencies are added transitively
@@ -86,6 +85,30 @@ processResources {
 	}
 }
 
+loom {
+	runs {
+		datagenClient {
+			inherit client
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=${project.archives_base_name}"
+
+			runDir "build/datagen"
+		}
+	}
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDirs += [
+					'src/main/generated'
+			]
+		}
+	}
+}
+
 machete {
 	// disable machete locally for faster builds
 	enabled = buildNumber != null
@@ -112,11 +135,6 @@ publishing {
 		}
 	}
 
-	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
 	}
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "encases:block/ladder/ladder",
+  "textures": {
+    "hoop": "encases:block/ladder_zinc_hoop",
+    "ladder": "encases:block/ladder_zinc"
+  }
+}

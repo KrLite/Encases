@@ -1,13 +1,13 @@
 package net.krlite.encases.mixin;
 
-import net.krlite.create_encases.content.contraptions.relays.belt.EncasesBeltTileEntity;
+import net.krlite.encases.content.contraptions.relays.belt.EncasesBeltTileEntity;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
-import net.krlite.create_encases.EncasesAllBlocks;
+import net.krlite.encases.EncasesAllBlocks;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.contraptions.relays.belt.BeltTileEntity;
 

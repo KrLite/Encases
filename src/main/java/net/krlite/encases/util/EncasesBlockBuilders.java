@@ -5,10 +5,10 @@ import static com.simibubi.create.foundation.data.CreateRegistrate.connectedText
 
 import java.util.function.Supplier;
 
-import net.krlite.create_encases.CreateEncases;
-import net.krlite.create_encases.EncasesAllSpriteShifts;
-import net.krlite.create_encases.content.contraptions.relays.encased.EncasesEncasedCogwheelBlock;
-import net.krlite.create_encases.content.contraptions.relays.encased.EncasesEncasedShaftBlock;
+import net.krlite.encases.Encases;
+import net.krlite.encases.EncasesAllSpriteShifts;
+import net.krlite.encases.content.contraptions.relays.encased.EncasesEncasedCogwheelBlock;
+import net.krlite.encases.content.contraptions.relays.encased.EncasesEncasedShaftBlock;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllTags;
 import com.simibubi.create.content.contraptions.base.CasingBlock;
@@ -50,7 +50,7 @@ public class EncasesBlockBuilders {
             Rarity rarity
     ) {
         String id = name + "_casing";
-        return CreateEncases.registrate()
+        return Encases.registrate()
                 .block(id, CasingBlock::deprecated)
                 .onRegister(connectedTextures(() -> new EncasedCTBehaviour(EncasesAllSpriteShifts.omni(id))))
                 .onRegister(casingConnectivity((block, cc) -> cc.makeCasing(block, EncasesAllSpriteShifts.omni(id))))
@@ -77,7 +77,7 @@ public class EncasesBlockBuilders {
             String name, NonNullUnaryOperator<Settings> settings,
             Rarity rarity
     ) {
-        return CreateEncases.registrate()
+        return Encases.registrate()
                 .block(name + "_ladder", MetalLadderBlock::new)
                 .transform(cdLadderBase(rarity))
                 .properties(settings)
@@ -90,7 +90,7 @@ public class EncasesBlockBuilders {
             NonNullFunction<Settings, EncasesEncasedShaftBlock> function,
             Rarity rarity
     ) {
-        return CreateEncases.registrate()
+        return Encases.registrate()
                 .block(casing + "_encased_shaft", function)
                 .initialProperties(SharedProperties::stone)
                 .transform(cdEncasedShaftBase(
@@ -109,7 +109,7 @@ public class EncasesBlockBuilders {
     ) {
         return !large
                 // Small
-                ? CreateEncases.registrate()
+                ? Encases.registrate()
                 .block(casing + "_encased_cogwheel", function)
                 .transform(b -> cdEncasedCogwheelBase(b,
                         () -> EncasesAllSpriteShifts.omni(casing + "_casing"), AllBlocks.COGWHEEL::get,
@@ -123,7 +123,7 @@ public class EncasesBlockBuilders {
                 .register()
 
                 // Large
-                : CreateEncases.registrate()
+                : Encases.registrate()
                 .block(casing + "_encased_large_cogwheel", function)
                 .transform(b -> cdEncasedCogwheelBase(b,
                         () -> EncasesAllSpriteShifts.omni(casing + "_casing"), AllBlocks.LARGE_COGWHEEL::get,

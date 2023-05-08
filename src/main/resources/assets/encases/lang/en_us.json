@@ -1,0 +1,34 @@
+{
+  "comment.itemGroup": "Item Groups",
+
+  "itemGroup.encases.general": "Create: Encases",
+
+
+
+  "comment.block": "Blocks",
+
+  "block.encases.shadow_steel_ladder"    : "Shadow Steel Ladder",
+  "block.encases.refined_radiance_ladder": "Refined Radiance Ladder",
+  "block.encases.railway_ladder"         : "Railway Ladder",
+  "block.encases.zinc_ladder"            : "Zinc Ladder",
+
+  "block.encases.zinc_casing": "Zinc Casing",
+
+  "block.encases.shadow_steel_encased_cogwheel"    : "Shadow Steel Encased Cogwheel",
+  "block.encases.refined_radiance_encased_cogwheel": "Refined Radiance Encased Cogwheel",
+  "block.encases.railway_encased_cogwheel"         : "Railway Encased Cogwheel",
+  "block.encases.copper_encased_cogwheel"          : "Copper Encased Cogwheel",
+  "block.encases.zinc_encased_cogwheel"            : "Zinc Encased Cogwheel",
+
+  "block.encases.shadow_steel_encased_large_cogwheel"    : "Shadow Steel Encased Large Cogwheel",
+  "block.encases.refined_radiance_encased_large_cogwheel": "Refined Radiance Encased Large Cogwheel",
+  "block.encases.railway_encased_large_cogwheel"         : "Railway Encased Large Cogwheel",
+  "block.encases.copper_encased_large_cogwheel"          : "Copper Encased Large Cogwheel",
+  "block.encases.zinc_encased_large_cogwheel"            : "Zinc Encased Large Cogwheel",
+
+  "block.encases.shadow_steel_encased_shaft"    : "Shadow Steel Encased Shaft",
+  "block.encases.refined_radiance_encased_shaft": "Refined Radiance Encased Shaft",
+  "block.encases.railway_encased_shaft"         : "Railway Encased Shaft",
+  "block.encases.copper_encased_shaft"          : "Copper Encased Shaft",
+  "block.encases.zinc_encased_shaft"            : "Zinc Encased Shaft"
+}

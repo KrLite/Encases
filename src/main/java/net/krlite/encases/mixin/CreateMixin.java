@@ -5,10 +5,10 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import net.krlite.create_encases.CreateEncases;
-import net.krlite.create_encases.EncasesAllBlocks;
-import net.krlite.create_encases.EncasesAllSpriteShifts;
-import net.krlite.create_encases.EncasesAllTileEntities;
+import net.krlite.encases.Encases;
+import net.krlite.encases.EncasesAllBlocks;
+import net.krlite.encases.EncasesAllSpriteShifts;
+import net.krlite.encases.EncasesAllTileEntities;
 import com.simibubi.create.Create;
 
 @Mixin(Create.class)
@@ -19,8 +19,8 @@ public class CreateMixin {
         EncasesAllTileEntities.register();
         EncasesAllSpriteShifts.register();
 
-        CreateEncases.REGISTRATE.register();
+        Encases.REGISTRATE.register();
 
-        CreateEncases.LOGGER.info("Splendid Mechanic Aesthetics! ⚙️");
+        Encases.LOGGER.info("Splendid Mechanic Aesthetics! ⚙️");
     }
 }

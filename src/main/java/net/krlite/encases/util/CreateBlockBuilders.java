@@ -1,9 +1,9 @@
 package net.krlite.encases.util;
 
-import net.krlite.create_encases.CreateEncases;
-import net.krlite.create_encases.content.contraptions.relays.encased.EncasesEncasedCogwheelBlock;
-import net.krlite.create_encases.content.contraptions.relays.encased.EncasesEncasedShaftBlock;
-import net.krlite.create_encases.mixin.AllSpriteShiftsInvoker;
+import net.krlite.encases.Encases;
+import net.krlite.encases.content.contraptions.relays.encased.EncasesEncasedCogwheelBlock;
+import net.krlite.encases.content.contraptions.relays.encased.EncasesEncasedShaftBlock;
+import net.krlite.encases.mixin.AllSpriteShiftsInvoker;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.contraptions.base.RotatedPillarKineticBlock;
 import com.simibubi.create.content.contraptions.relays.encased.EncasedCTBehaviour;
@@ -42,7 +42,7 @@ public class CreateBlockBuilders {
             NonNullFunction<Settings, EncasesEncasedShaftBlock> function,
             Rarity rarity
     ) {
-        return CreateEncases.registrate()
+        return Encases.registrate()
                 .block(casing + "_encased_shaft", function)
                 .initialProperties(SharedProperties::stone)
                 .transform(createEncasedShaftBase(
@@ -85,7 +85,7 @@ public class CreateBlockBuilders {
             Rarity rarity
     ) {
         return ! large
-                ? CreateEncases.registrate()
+                ? Encases.registrate()
                 // Small
                 .block(casing + "_encased_cogwheel", function)
                 .transform(b -> createEncasedCogwheelBase(b,
@@ -100,7 +100,7 @@ public class CreateBlockBuilders {
                 .register()
 
                 // Large
-                        : CreateEncases.registrate()
+                        : Encases.registrate()
                 .block(casing + "_encased_large_cogwheel", function)
                 .transform(b -> createEncasedCogwheelBase(b,
                         () -> AllSpriteShiftsInvoker.invokeOmni(casing + "_casing"), AllBlocks.LARGE_COGWHEEL::get,

@@ -1,6 +1,6 @@
 package net.krlite.encases;
 
-import net.krlite.create_encases.mixin.AllSpriteShiftsInvoker;
+import net.krlite.encases.mixin.AllSpriteShiftsInvoker;
 import com.simibubi.create.Create;
 import com.simibubi.create.foundation.block.connected.AllCTTypes;
 import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry;
@@ -43,17 +43,17 @@ public class EncasesAllSpriteShifts {
 
 
     public static SpriteShiftEntry get(String originalLocation, String targetLocation) {
-        return SpriteShifter.get(CreateEncases.identifier(originalLocation), CreateEncases.identifier(targetLocation));
+        return SpriteShifter.get(Encases.identifier(originalLocation), Encases.identifier(targetLocation));
     }
 
     public static SpriteShiftEntry getMixed(String originalLocation, String targetLocation) {
-        return SpriteShifter.get(Create.asResource(originalLocation), CreateEncases.identifier(targetLocation));
+        return SpriteShifter.get(Create.asResource(originalLocation), Encases.identifier(targetLocation));
     }
 
 
 
     private static CTSpriteShiftEntry getCT(CTType type, String blockTextureName, String connectedTextureName) {
-        return CTSpriteShifter.getCT(type, CreateEncases.identifier("block",  blockTextureName), CreateEncases.identifier("block",  connectedTextureName + "_connected"));
+        return CTSpriteShifter.getCT(type, Encases.identifier("block",  blockTextureName), Encases.identifier("block",  connectedTextureName + "_connected"));
     }
 
     private static CTSpriteShiftEntry getCT(CTType type, String blockTextureName) {

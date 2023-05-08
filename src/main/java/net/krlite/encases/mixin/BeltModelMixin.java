@@ -1,9 +1,7 @@
 package net.krlite.encases.mixin;
 
-import java.util.Random;
 import java.util.function.Supplier;
 
-import net.krlite.create_encases.content.contraptions.relays.belt.EncasesBeltTileEntity;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
@@ -11,8 +9,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import net.krlite.create_encases.EncasesAllSpriteShifts;
 
 import com.simibubi.create.content.contraptions.relays.belt.BeltModel;
 import com.simibubi.create.content.contraptions.relays.belt.BeltTileEntity;
@@ -22,11 +18,14 @@ import net.fabricmc.fabric.api.renderer.v1.model.ForwardingBakedModel;
 import net.fabricmc.fabric.api.renderer.v1.model.SpriteFinder;
 import net.fabricmc.fabric.api.renderer.v1.render.RenderContext;
 import net.fabricmc.fabric.api.rendering.data.v1.RenderAttachedBlockView;
+import net.krlite.encases.EncasesAllSpriteShifts;
+import net.krlite.encases.content.contraptions.relays.belt.EncasesBeltTileEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.random.RandomGenerator;
 import net.minecraft.world.BlockRenderView;
 
 @Mixin(BeltModel.class)
@@ -38,8 +37,8 @@ public class BeltModelMixin extends ForwardingBakedModel {
 
     @Inject(method = "emitBlockQuads", at = @At("HEAD"), cancellable = true)
     public void updateBeltCasingType(
-            BlockRenderView blockView, BlockState state, BlockPos pos,
-            Supplier<Random> randomSupplier, RenderContext context, CallbackInfo ci
+			BlockRenderView blockView, BlockState state, BlockPos pos,
+			Supplier<RandomGenerator> randomSupplier, RenderContext context, CallbackInfo ci
     ) {
         if ( blockView instanceof RenderAttachedBlockView attachmentView ) {
             if ( attachmentView.getBlockEntityRenderAttachment(pos) instanceof BeltTileEntity.CasingType type && !type.equals(BeltTileEntity.CasingType.NONE) ) {

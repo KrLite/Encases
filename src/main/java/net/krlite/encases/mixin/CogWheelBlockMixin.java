@@ -2,14 +2,14 @@ package net.krlite.encases.mixin;
 
 import static com.simibubi.create.content.contraptions.base.RotatedPillarKineticBlock.AXIS;
 
-import net.krlite.create_encases.content.contraptions.relays.encased.EncasesEncasedCogwheelBlock;
+import net.krlite.encases.content.contraptions.relays.encased.EncasesEncasedCogwheelBlock;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import net.krlite.create_encases.EncasesAllBlocks;
+import net.krlite.encases.EncasesAllBlocks;
 
 import com.simibubi.create.content.contraptions.base.IRotate;
 import com.simibubi.create.content.contraptions.base.KineticTileEntity;

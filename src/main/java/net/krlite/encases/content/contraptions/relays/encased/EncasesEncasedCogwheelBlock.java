@@ -1,7 +1,7 @@
 package net.krlite.encases.content.contraptions.relays.encased;
 
-import net.krlite.create_encases.EncasesAllBlocks;
-import net.krlite.create_encases.EncasesAllTileEntities;
+import net.krlite.encases.EncasesAllBlocks;
+import net.krlite.encases.EncasesAllTileEntities;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.contraptions.base.CasingBlock;
 import com.simibubi.create.content.contraptions.relays.elementary.SimpleKineticTileEntity;

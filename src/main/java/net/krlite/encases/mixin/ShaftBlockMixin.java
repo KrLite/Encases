@@ -4,8 +4,8 @@ import static com.simibubi.create.content.contraptions.base.RotatedPillarKinetic
 
 import java.util.List;
 
-import net.krlite.create_encases.EncasesAllBlocks;
-import net.krlite.create_encases.content.contraptions.relays.encased.EncasesEncasedShaftBlock;
+import net.krlite.encases.EncasesAllBlocks;
+import net.krlite.encases.content.contraptions.relays.encased.EncasesEncasedShaftBlock;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
