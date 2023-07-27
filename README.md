@@ -4,4 +4,4 @@
 
 ## License
 
-**Create: Encases** is available under the **[GNU Public License.](LICENSE)**
+**Create: Encases** is licensed under the **[GNU General Public License v3.](LICENSE)**
